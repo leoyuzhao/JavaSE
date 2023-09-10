@@ -14,7 +14,7 @@ import java.util.concurrent.Future;
 public class BuildThread {
 
     public static void main(String[] args) throws Exception {
-        test02();
+        test01();
     }
 
     /**
@@ -28,6 +28,7 @@ public class BuildThread {
         Callable<Integer> callable = new Callable<Integer>() {
             @Override
             public Integer call() throws Exception {
+                int i = 1/0;
                 return 123;
             }
         };
